@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get install -y --no-install-recommends iotedge=1.0.0-1 && \ 
     rm -rf /var/lib/apt/lists/*
     
-RUN az extension add --name azure-cli-iot-ext
+RUN az extension add --name azure-iot
 
 COPY edge-provision.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/edge-provision.sh
